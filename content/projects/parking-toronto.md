@@ -1,6 +1,7 @@
 ---
 title: Toronto Parking Ticket Data Analysis and Visualization
 date: 2018-10-24
+featured_image: "/images/parking_ticket_thumbnail.png"
 ---
 
 

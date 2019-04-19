@@ -1,6 +1,7 @@
 ---
 title: CND Sim
 date: 2018-01-27
+featured_image: "/images/demo_3.png"
 ---
 
 {{< figure src="/images/demo_3.png" link="https://github.com/inahinfante/Game-Jam-2019">}}

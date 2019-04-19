@@ -1,6 +1,7 @@
 ---
 title: On the persistence of auxin patterns with external forcing
 date: 2018-04-15
+featured_image: "/images/AuxinFlux.png"
 ---
 
 {{< figure src="/images/AuxinFlux.png" link="/files/am382_final.pdf">}}

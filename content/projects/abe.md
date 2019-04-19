@@ -1,6 +1,7 @@
 ---
 title: ABE, the Anti-Bullying Extension
 date: 2017-03-19
+featured_image: "/images/abe.jpg"
 ---
 
 {{< figure src="/images/abe.jpg" link="https://github.com/mosiman/RUhacks2017">}}

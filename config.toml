@@ -7,7 +7,7 @@ theme = "ananke"
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
-Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+Paginate = 5 # this is set low for demonstrating with dummy content. Set to a higher number
 googleAnalytics = ""
 enableRobotsTXT = true
 
@@ -38,3 +38,14 @@ enableRobotsTXT = true
     name = "About"
     identifier = "about"
     url = "/about/"
+
+[[menu.main]]
+    name = "Resume"
+    identifier = "resume"
+    url = "/files/webresume_dillonchan.pdf"
+
+
+# Projects photo credits:
+# Photo by Jo Szczepanska on Unsplash
+# Posts photo credits:
+# Photo by Kelly Sikkema on Unsplash

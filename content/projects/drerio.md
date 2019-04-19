@@ -1,6 +1,7 @@
 ---
 title: D. rerio and convergent evolution in electric fish
 date: 2017-11-27
+featured_image: "/images/transcriptome.png"
 ---
 
 {{< figure src="/images/transcriptome.png" link="/files/b469_final.pdf">}}
