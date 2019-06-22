@@ -44,6 +44,12 @@ enableRobotsTXT = true
     identifier = "resume"
     url = "/files/webresume_dillonchan.pdf"
 
+# god bless dzello
+# https://github.com/dzello/reveal-hugo
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
 
 # Projects photo credits:
 # Photo by Jo Szczepanska on Unsplash
