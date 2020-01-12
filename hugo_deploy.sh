@@ -1,3 +1,2 @@
 rm -rf public/
-hugo && rsync -avz --delete public/ d49chan@hfcs.csclub.uwaterloo.ca:~/www
-cp ~/.htaccess ~/www
+HUGO_ENV=production hugo && rsync -avz --delete public/ d49chan@hfcs.csclub.uwaterloo.ca:~/www --exclude .htaccess
