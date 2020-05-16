@@ -44,6 +44,9 @@ enableRobotsTXT = true
     identifier = "resume"
     url = "/files/webresume_dillonchan.pdf"
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 
 # Projects photo credits:
 # Photo by Jo Szczepanska on Unsplash

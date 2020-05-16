@@ -2,7 +2,6 @@
 title: Toronto Parking Ticket visualizer
 ---
 
-
 <link rel="stylesheet" href="/parkingtoronto/viz.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
 
@@ -14,14 +13,6 @@ title: Toronto Parking Ticket visualizer
 
 <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-
-
-
-
-
-
-
-
 
 <div class="container">
 <div class="row">
