@@ -1,6 +1,6 @@
 title = "mosiman"
 
-baseURL = "http://mosiman.ca"
+baseURL = "https://mosiman.ca"
 languageCode = "en-us"
 theme = "ananke"
 
