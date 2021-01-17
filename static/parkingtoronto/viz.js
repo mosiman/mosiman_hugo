@@ -18,7 +18,7 @@ $(document).ready(function() {
 	function onMapClick(e){
 		// This is going to be the workhorse function, probably.
 		popup.setLatLng(e.latlng).setContent("Loading data for coordinates " + e.latlng.toString()).openOn(mymap)
-        var datafetch = fetch("http://www.mosiman.ca/api/tss/tssloc?lat=" + e.latlng.lat.toString() + "&lng=" + e.latlng.lng.toString());
+        var datafetch = fetch("https://mosiman.ca/api/tss/tssloc?lat=" + e.latlng.lat.toString() + "&lng=" + e.latlng.lng.toString());
         // var datafetch = fetch("http://mosiman.ca/api/tss/tssloc?lat=43.672&lng=-79.387523").then(function(response){
         //     window.alert("fetch then");
         // })
