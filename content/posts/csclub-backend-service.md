@@ -38,7 +38,7 @@ This creates a small server running at `localhost:33333` that displays all the s
 
 Now, head to `http://csclub.uwaterloo.ca/~WATIAM/test/` (trailing slash!!) and voila! A real live program exposed to the internet! You should probably shut it down before someone mucks through all your files.
 
-At the time of writing, this is how my [parking ticket visualizer](http://mosiman.ca/parkingtoronto/) dynamically responds to requests. 
+At the time of writing, this is how my [parking ticket visualizer](/parkingtoronto/) dynamically responds to requests. 
 
 There's a bit more involved if you want to keep your service running, and for longer. I won't pretend to have it all figured it out, but for starters
 - Use a real web server! One that can handle lots of requests (e.g., not your built-in Flask/Django development server). For python, try [gunicorn](https://gunicorn.org/). 

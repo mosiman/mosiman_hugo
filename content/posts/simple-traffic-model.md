@@ -7,7 +7,7 @@ date: 2019-05-27
 
 I fucking hate traffic. Let's do some math.
 
-I have previously done [some work](http://mosiman.ca/projects/auxin-pattern/) with cell / compartment based modelling, so I guess I'll attempt to do a similar thing with traffic flows.
+I have previously done [some work](/projects/auxin-pattern/) with cell / compartment based modelling, so I guess I'll attempt to do a similar thing with traffic flows.
 
 ## The model
 
