@@ -40,7 +40,9 @@ jobs:
           # Set an output parameter `uname` for use in subsequent steps
           run: |
             ls
-            echo "DOCKER USERNAME: $DOCKER_USERNAME"
+            apt-get update
+            apt install docker.io -y
+            docker --version
             docker login --username=${DOCKER_USERNAME} --password=${DOCKER_PASSWORD}
             uname -a
             ./docker-build.sh
