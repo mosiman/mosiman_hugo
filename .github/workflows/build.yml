@@ -29,7 +29,6 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: Run on arch action
         uses: uraimo/run-on-arch-action@v2
-        name: Run commands
         id: runcmd
         with:
           arch: aarch64
