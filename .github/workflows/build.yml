@@ -21,23 +21,28 @@ jobs:
   build_aarch64:
     # The host should always be Linux
     runs-on: ubuntu-20.04
-    name: Build on ubuntu-20.04 aarch64
     steps:
-      - uses: actions/checkout@v3
-      - uses: uraimo/run-on-arch-action@v2
+      - run: echo "🎉 Running builds for x86_64"
+      - name: Check out repo
+        uses: actions/checkout@v3
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: Run on arch action
+        uses: uraimo/run-on-arch-action@v2
         name: Run commands
         id: runcmd
         with:
           arch: aarch64
           distro: ubuntu20.04
+          env:
+            DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+            DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
           # Set an output parameter `uname` for use in subsequent steps
           run: |
             ls
+            echo "DOCKER USERNAME: $DOCKER_USERNAME"
+            docker login --username=${DOCKER_USERNAME} --password=${DOCKER_PASSWORD}
             uname -a
-            echo ::set-output name=uname::$(uname -a)
+            ./docker-build.sh
 
-      - name: Get the output
-        # Echo the `uname` output parameter from the `runcmd` step
-        run: |
-          echo "The uname output was ${{ steps.runcmd.outputs.uname }}"
