@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Build Hugo container
 on: [push]
 jobs:
   build_x86_64:
@@ -19,20 +19,25 @@ jobs:
           ./docker-build.sh
       - run: echo "🍏 This job's status is ${{ job.status }}."
   build_aarch64:
-    runs-on: ARM64
+    # The host should always be Linux
+    runs-on: ubuntu-20.04
+    name: Build on ubuntu-20.04 aarch64
     steps:
-      - run: echo "🎉 Running builds for aarch64"
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        run: |
-          echo "DOCKER USERNAME: $DOCKER_USERNAME"
-          docker login --username=${DOCKER_USERNAME} --password=${DOCKER_PASSWORD}
-          ./docker-build.sh
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - uses: actions/checkout@v3
+      - uses: uraimo/run-on-arch-action@v2
+        name: Run commands
+        id: runcmd
+        with:
+          arch: aarch64
+          distro: ubuntu20.04
 
+          # Set an output parameter `uname` for use in subsequent steps
+          run: |
+            ls
+            uname -a
+            echo ::set-output name=uname::$(uname -a)
+
+      - name: Get the output
+        # Echo the `uname` output parameter from the `runcmd` step
+        run: |
+          echo "The uname output was ${{ steps.runcmd.outputs.uname }}"
