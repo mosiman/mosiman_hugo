@@ -18,7 +18,7 @@ jobs:
           docker login --username=${DOCKER_USERNAME} --password=${DOCKER_PASSWORD}
           ./docker-build.sh
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  build_x86_64:
+  build_aarch64:
     runs-on: ARM64
     steps:
       - run: echo "🎉 Running builds for aarch64"
